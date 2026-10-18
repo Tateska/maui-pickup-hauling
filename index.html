@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maui dump runs, green-waste runs, pickup and delivery. Local hauling services across Maui. Contact us for a quote.">
+  <meta name="theme-color" content="#10252d">
+  <title>Maui Pickup &amp; Hauling | Dump Runs, Green Waste, Pickup &amp; Delivery</title>
+  <style>
+    :root{--ink:#10252d;--green:#17643c;--lime:#a6dc54;--blue:#17639a;--cream:#f6f8f5;--muted:#52616a}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+    a{color:inherit}
+    .topbar{background:var(--ink);color:#fff;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .brand{font-weight:900;font-size:clamp(1.35rem,3vw,2rem);line-height:1.05;letter-spacing:.4px}
+    .brand span{display:block;color:var(--lime);font-style:italic;font-size:.68em;margin-top:4px}
+    nav{display:flex;gap:22px;flex-wrap:wrap}
+    nav a{text-decoration:none;font-weight:700;font-size:.95rem}
+    nav a:hover{color:var(--lime)}
+    .top-contact{text-align:right;font-weight:700}
+    .top-contact a{display:block;text-decoration:none}
+    .hero{min-height:420px;display:flex;align-items:center;padding:60px 6%;color:#fff;background:linear-gradient(90deg,rgba(8,27,34,.91),rgba(8,27,34,.55) 58%,rgba(8,27,34,.2)),url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero-content{max-width:850px}
+    .eyebrow{color:var(--lime);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.88rem}
+    h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.02;margin:12px 0 18px;max-width:900px}
+    .hero p{font-size:clamp(1.1rem,2vw,1.35rem);max-width:680px;margin:0 0 25px}
+    .hero-services{font-size:clamp(1rem,2vw,1.25rem);font-weight:800;margin:0 0 24px}
+    .hero-services span{color:var(--lime);padding:0 7px}
+    .button{display:inline-block;text-decoration:none;font-weight:800;border-radius:7px;padding:13px 19px;background:var(--lime);color:#14252b}
+    .button:hover{filter:brightness(.94)}
+    section{padding:56px 5%}
+    .section-head{text-align:center;max-width:800px;margin:0 auto 30px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:0 0 12px}
+    .section-head p{margin:0;color:var(--muted);font-size:1.08rem}
+    .services{background:var(--cream)}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1250px;margin:auto;align-items:stretch}
+    .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(16,37,45,.1);display:flex;flex-direction:column;border:1px solid #e4eae5}
+    .card img{width:100%;height:205px;object-fit:cover;display:block;background:#dfe8df}
+    .card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+    .badge{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.65rem;font-weight:900;margin-top:-51px;position:relative;border:4px solid white}
+    .green{background:var(--green)}.blue{background:var(--blue)}.dark{background:var(--ink)}
+    .card h3{font-size:1.45rem;line-height:1.15;margin:10px 0 6px}
+    .card .sub{font-size:.86rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin:0 0 13px}
+    .card ul{padding-left:20px;margin:0 0 22px;flex:1}
+    .card li{padding:4px 0}
+    .card li::marker{color:var(--green)}
+    .card .button{background:var(--ink);color:white;text-align:center;margin-top:auto}
+    .card:nth-child(2) .button{background:var(--green)}
+    .card:nth-child(3) .button{background:var(--blue)}
+    .why{padding-top:45px;padding-bottom:45px}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1100px;margin:auto;text-align:center}
+    .feature{padding:8px 12px}
+    .feature .icon{font-size:2rem}
+    .feature h3{font-size:1rem;margin:6px 0}
+    .feature p{color:var(--muted);font-size:.93rem;margin:0}
+    .contact{background:linear-gradient(120deg,rgba(10,32,40,.96),rgba(15,74,66,.9)),url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=80') center/cover;color:#fff;text-align:center}
+    .contact h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 10px}
+    .contact p{font-size:1.1rem;margin:0 auto 22px;max-width:700px}
+    .contact-details{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;font-size:1.15rem;font-weight:800;margin:20px 0}
+    .contact-details a{color:#fff;text-decoration:none}
+    footer{background:#091a20;color:#dce5e5;text-align:center;padding:20px 5%;font-size:.9rem}
+    footer a{color:var(--lime)}
+    @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:600px}.card img{height:230px}.features{grid-template-columns:repeat(2,1fr)}.top-contact{text-align:left}}
+    @media(max-width:600px){.topbar{align-items:flex-start}.top-contact{width:100%}nav{gap:14px}.hero{min-height:460px;padding:48px 6%}section{padding:42px 5%}.card-body{padding:21px}.contact-details{gap:14px;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" style="text-decoration:none">MAUI <span>Pickup &amp; Hauling</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="top-contact">
+      <a href="tel:8088681224">☎ 808-868-1224</a>
+      <a href="mailto:mauihaulingpickup@gmail.com">✉ mauihaulingpickup@gmail.com</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Local hauling across Maui</div>
+        <h1>MAUI Pickup &amp; Hauling</h1>
+        <p>We haul it away, bring it to you, or help get it where it needs to go.</p>
+        <div class="hero-services">Dump Runs <span>•</span> Green Waste Runs <span>•</span> Pickup &amp; Delivery</div>
+        <a class="button" href="#contact">Request a Quote</a>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-head">
+        <h2>Three Services. One Local Hauling Team.</h2>
+        <p>Choose the service you need. Each service is equally important, and every quote is based on the job details.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1605600659873-d808a13e4d9a?auto=format&fit=crop&w=1000&q=80" alt="Household items being cleared away">
+          <div class="card-body">
+            <div class="badge dark" aria-hidden="true">↗</div>
+            <h3>Dump Runs &amp; Junk Removal</h3>
+            <p class="sub">Clear out the unwanted</p>
+            <ul>
+              <li>Household junk and unwanted items</li>
+              <li>Old furniture and mattresses</li>
+              <li>Garage and property cleanouts</li>
+              <li>Small loads of general debris</li>
+              <li>Dump runs and disposal hauling</li>
+            </ul>
+            <a class="button" href="mailto:mauihaulingpickup@gmail.com?subject=Dump%20Run%20Quote">Get a Dump Run Quote</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=80" alt="Green yard waste and branches">
+          <div class="card-body">
+            <div class="badge green" aria-hidden="true">✦</div>
+            <h3>Green Waste Runs</h3>
+            <p class="sub">Keep your yard clean</p>
+            <ul>
+              <li>Yard trimmings and branches</li>
+              <li>Leaves and general yard debris</li>
+              <li>Palm fronds and tree waste</li>
+              <li>Green-waste hauling</li>
+              <li>Yard cleanup loads</li>
+            </ul>
+            <a class="button" href="mailto:mauihaulingpickup@gmail.com?subject=Green%20Waste%20Quote">Get a Green Waste Quote</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Home and household delivery setting">
+          <div class="card-body">
+            <div class="badge blue" aria-hidden="true">➜</div>
+            <h3>Pickup &amp; Delivery</h3>
+            <p class="sub">Get it from here to there</p>
+            <ul>
+              <li>Facebook Marketplace pickups</li>
+              <li>Craigslist purchases</li>
+              <li>Furniture and appliance pickups</li>
+              <li>Store pickups and local deliveries</li>
+              <li>Small moves and general hauling</li>
+            </ul>
+            <a class="button" href="mailto:mauihaulingpickup@gmail.com?subject=Pickup%20and%20Delivery%20Quote">Get a Pickup Quote</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="why" id="about">
+      <div class="section-head">
+        <h2>Friendly, Local Maui Service</h2>
+        <p>Clear communication, straightforward quotes, and help with the hauling jobs that need doing.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="icon">✓</div><h3>Reliable &amp; On Time</h3><p>We communicate about the job and timing.</p></div>
+        <div class="feature"><div class="icon">⌂</div><h3>Locally Operated</h3><p>Serving customers across Maui.</p></div>
+        <div class="feature"><div class="icon">♻</div><h3>Keep Maui Clean</h3><p>Haul away green waste and unwanted items.</p></div>
+        <div class="feature"><div class="icon">☀</div><h3>Friendly Service</h3><p>Contact us and tell us what you need moved.</p></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Need a Hauling Hand?</h2>
+      <p>Tell us what needs hauling, where it is, and where it needs to go. Photos are helpful when requesting a quote.</p>
+      <div class="contact-details">
+        <a href="tel:8088681224">☎ Call or Text: 808-868-1224</a>
+        <a href="mailto:mauihaulingpickup@gmail.com">✉ mauihaulingpickup@gmail.com</a>
+      </div>
+      <a class="button" href="mailto:mauihaulingpickup@gmail.com?subject=Maui%20Hauling%20Quote">Contact Us for a Quote</a>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Maui Pickup &amp; Hauling · Dump Runs · Green Waste Runs · Pickup &amp; Delivery</p>
+    <p><a href="tel:8088681224">808-868-1224</a> · <a href="mailto:mauihaulingpickup@gmail.com">Email us</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
