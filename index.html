@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maui Pickup & Hauling — local pickup, delivery, small moves, and hauling services across Maui. Contact us for a quote.">
+  <meta name="theme-color" content="#123b35">
+  <title>Maui Pickup & Hauling | Local Pickup & Delivery</title>
+  <style>
+    :root {
+      --deep: #123b35;
+      --deep2: #1b5147;
+      --sand: #f6f1e7;
+      --cream: #fffdf8;
+      --leaf: #b9d4a6;
+      --orange: #e58b50;
+      --ink: #1d302c;
+      --muted: #60716b;
+      --line: #e5e4d9;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+    a { color: inherit; }
+    .topbar { background: var(--deep); color: #f7f4eb; padding: 10px 20px; text-align: center; font-size: .9rem; }
+    .topbar a { text-decoration: none; font-weight: 700; }
+    header { background: var(--cream); border-bottom: 1px solid var(--line); }
+    .nav { max-width: 1120px; margin: auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: flex; gap: 12px; align-items: center; text-decoration: none; }
+    .brand-mark { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--deep); color: white; font-size: 1.35rem; }
+    .brand-name { font-weight: 850; line-height: 1.15; letter-spacing: -.03em; }
+    .brand-name small { display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+    .navlinks { display: flex; align-items: center; gap: 25px; font-size: .94rem; font-weight: 650; }
+    .navlinks a { text-decoration: none; }
+    .navlinks a:hover { color: var(--deep2); }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; border: 0; border-radius: 999px; padding: 13px 20px; background: var(--orange); color: #1e2b26; text-decoration: none; font-weight: 800; box-shadow: 0 7px 18px #e58b5028; transition: transform .15s ease, filter .15s ease; }
+    .button:hover { transform: translateY(-2px); filter: brightness(1.03); }
+    .button.dark { background: var(--deep); color: white; box-shadow: none; }
+    .hero { overflow: hidden; position: relative; background: var(--sand); }
+    .hero:before { content: ""; position: absolute; width: 430px; height: 430px; border-radius: 50%; background: #dce7cf; right: -115px; top: -150px; opacity: .72; }
+    .hero-inner { position: relative; max-width: 1120px; margin: auto; padding: 82px 24px 78px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 55px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: .15em; font-size: .76rem; font-weight: 850; color: var(--deep2); }
+    .eyebrow:before { content: ""; width: 24px; height: 2px; background: var(--orange); }
+    h1 { margin: 18px 0; font-size: clamp(2.6rem, 5.5vw, 4.65rem); line-height: 1.02; letter-spacing: -.065em; color: var(--deep); max-width: 670px; }
+    .hero p { max-width: 560px; font-size: 1.13rem; color: #52655d; margin: 0 0 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .note { margin-top: 18px; color: var(--muted); font-size: .88rem; }
+    .visual { min-height: 355px; border-radius: 30px; background: linear-gradient(145deg, #1a5146, #0e302c); position: relative; overflow: hidden; display: flex; align-items: end; padding: 26px; box-shadow: 0 25px 60px #123b3522; }
+    .sun { position: absolute; width: 150px; height: 150px; border-radius: 50%; background: #efb36f; top: 35px; right: 45px; }
+    .mountain { position: absolute; bottom: 92px; width: 0; height: 0; border-left: 190px solid transparent; border-right: 190px solid transparent; border-bottom: 220px solid #527a5e; left: -30px; }
+    .mountain.two { border-left-width: 230px; border-right-width: 230px; border-bottom-width: 180px; left: 140px; bottom: 70px; border-bottom-color: #2d6250; }
+    .road { position: absolute; height: 180px; width: 170%; bottom: -125px; left: -35%; background: #e5d7b9; transform: rotate(-13deg); border-radius: 50%; border: 9px solid #c6b38e; }
+    .truck { position: absolute; bottom: 63px; left: 50%; transform: translateX(-50%); width: 250px; height: 86px; }
+    .truck-bed { position: absolute; left: 0; top: 10px; width: 142px; height: 48px; background: #e8a05e; border-radius: 5px 2px 2px 5px; border: 4px solid #173b32; }
+    .truck-cab { position: absolute; right: 0; top: 23px; width: 91px; height: 35px; background: #f6f1e7; border: 4px solid #173b32; border-radius: 5px 14px 3px 3px; }
+    .truck-cab:before { content: ""; position: absolute; right: 9px; top: 5px; width: 28px; height: 15px; background: #9abdb0; border-radius: 3px; }
+    .wheel { position: absolute; bottom: 0; width: 34px; height: 34px; background: #172a27; border: 7px solid #a6b4a8; border-radius: 50%; }
+    .wheel.one { left: 22px; } .wheel.two { right: 24px; }
+    .visual-label { z-index: 2; position: relative; width: 100%; color: white; background: #092d28d9; padding: 15px 17px; border-radius: 16px; backdrop-filter: blur(5px); }
+    .visual-label strong { display: block; font-size: 1.08rem; }
+    .visual-label span { font-size: .88rem; color: #d9e6db; }
+    section { padding: 76px 24px; }
+    .container { max-width: 1120px; margin: auto; }
+    .section-head { max-width: 650px; margin-bottom: 34px; }
+    h2 { color: var(--deep); letter-spacing: -.045em; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 12px 0; }
+    .section-head p { color: var(--muted); font-size: 1.04rem; margin-bottom: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); background: white; border-radius: 22px; padding: 25px; }
+    .icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; background: #e8efe2; font-size: 1.45rem; margin-bottom: 19px; }
+    .card h3 { margin: 0 0 8px; color: var(--deep); font-size: 1.16rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+    .how { background: var(--deep); color: white; }
+    .how h2, .how .section-head p { color: white; }
+    .how .section-head p { opacity: .78; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+    .step { border-top: 1px solid #ffffff42; padding-top: 20px; }
+    .step-number { color: var(--leaf); font-size: .82rem; font-weight: 850; letter-spacing: .12em; }
+    .step h3 { font-size: 1.25rem; margin: 10px 0 6px; }
+    .step p { color: #d3e0d9; margin: 0; }
+    .quote-band { background: #e7eedf; }
+    .quote-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .quote-inner h2 { max-width: 620px; margin-bottom: 8px; }
+    .quote-inner p { margin: 0; color: var(--muted); }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 45px; align-items: start; }
+    .contact-panel { background: var(--sand); border-radius: 24px; padding: 28px; }
+    .contact-line { display: flex; gap: 13px; padding: 16px 0; border-bottom: 1px solid #deded2; }
+    .contact-line:last-child { border-bottom: 0; }
+    .contact-line .icon { margin: 0; flex-shrink: 0; }
+    .contact-line small { display: block; color: var(--muted); }
+    .contact-line a { font-weight: 800; text-decoration: none; overflow-wrap: anywhere; }
+    .contact-copy p { color: var(--muted); }
+    footer { background: #0d2c28; color: #eaf0e7; padding: 26px 24px; }
+    .footer-inner { max-width: 1120px; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: .88rem; }
+    footer a { color: #eaf0e7; }
+    @media (max-width: 780px) {
+      .nav { padding: 15px 18px; } .navlinks { gap: 12px; } .navlinks a:not(.button) { display: none; }
+      .hero-inner { grid-template-columns: 1fr; padding: 58px 20px; gap: 34px; }
+      .visual { min-height: 300px; }
+      section { padding: 58px 20px; }
+      .cards, .steps { grid-template-columns: 1fr; }
+      .quote-inner { align-items: flex-start; flex-direction: column; }
+      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">Local pickup, delivery & hauling across Maui · <a href="tel:+18088681224">Call or text 808-868-1224</a></div>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Maui Pickup and Hauling home">
+        <span class="brand-mark">↗</span>
+        <span class="brand-name">Maui Pickup & Hauling<small>Local help, island-wide</small></span>
+      </a>
+      <div class="navlinks">
+        <a href="#services">Services</a><a href="#how-it-works">How it works</a><a href="#contact">Contact</a>
+        <a class="button dark" href="#contact">Get a Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Your local Maui pickup service</span>
+          <h1>Need it picked up? <br>Let’s get it moving.</h1>
+          <p>Friendly, dependable pickup and hauling help for furniture, appliances, Marketplace finds, store purchases, small moves, and more.</p>
+          <div class="actions">
+            <a class="button" href="tel:+18088681224">☎ Call or Text</a>
+            <a class="button dark" href="mailto:mauihaulingpickup@gmail.com?subject=Pickup%20or%20Hauling%20Quote">Request a Quote →</a>
+          </div>
+          <div class="note">Tell us what you need moved, where it’s going, and when you need it.</div>
+        </div>
+        <div class="visual" aria-label="Illustration of a pickup truck on a Maui landscape">
+          <div class="sun"></div><div class="mountain"></div><div class="mountain two"></div><div class="road"></div>
+          <div class="truck"><div class="truck-bed"></div><div class="truck-cab"></div><div class="wheel one"></div><div class="wheel two"></div></div>
+          <div class="visual-label"><strong>Pickup & delivery made easier.</strong><span>Local service · Clear quotes · Convenient communication</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What we can help with</span>
+          <h2>One less thing on your to-do list.</h2>
+          <p>From a single item to a small load, reach out with the details and we’ll let you know if we can help.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">🛋️</div><h3>Furniture & Marketplace pickups</h3><p>Help collecting couches, tables, dressers, and other finds from Facebook Marketplace or Craigslist.</p></article>
+          <article class="card"><div class="icon">🧺</div><h3>Appliances & store pickups</h3><p>Pickup and delivery for suitable appliances, home items, and purchases from local stores.</p></article>
+          <article class="card"><div class="icon">📦</div><h3>Small moves & hauling</h3><p>Small loads, general hauling, and green-waste or dump runs when the load and disposal requirements are a fit.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" style="color:var(--leaf)">Simple process</span>
+          <h2>Get a quote in three easy steps.</h2>
+          <p>No starting price displayed. Each job is quoted based on the details, so you can check the cost before booking.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="step-number">STEP 01</span><h3>Send the details</h3><p>Tell us what needs picking up, the pickup and drop-off areas, and your preferred timing.</p></div>
+          <div class="step"><span class="step-number">STEP 02</span><h3>Receive your quote</h3><p>We’ll review distance, item size, access, and any loading or unloading help needed.</p></div>
+          <div class="step"><span class="step-number">STEP 03</span><h3>Confirm the job</h3><p>If the quote works for you and the job is a fit, we’ll coordinate the details.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="container quote-inner">
+        <div><h2>Have something that needs moving?</h2><p>Send a quick message for a quote. Photos are helpful for larger items.</p></div>
+        <a class="button" href="mailto:mauihaulingpickup@gmail.com?subject=Pickup%20or%20Hauling%20Quote">Get My Quote →</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Get in touch</span>
+          <h2>Let’s talk about your pickup.</h2>
+          <p>For the fastest quote, include the item or load, pickup location, destination, preferred date, and whether you need help loading or unloading.</p>
+          <p>Service availability depends on the job, vehicle capacity, access, and disposal requirements.</p>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-line"><div class="icon">📱</div><div><small>Call or text</small><a href="tel:+18088681224">808-868-1224</a></div></div>
+          <div class="contact-line"><div class="icon">✉️</div><div><small>Email</small><a href="mailto:mauihaulingpickup@gmail.com">mauihaulingpickup@gmail.com</a></div></div>
+          <div class="contact-line"><div class="icon">📍</div><div><small>Service area</small><strong>Maui, Hawaii</strong><div style="color:var(--muted);font-size:.9rem">Ask about your pickup and destination.</div></div></div>
+          <div style="padding-top:20px"><a class="button dark" style="width:100%" href="mailto:mauihaulingpickup@gmail.com?subject=Pickup%20or%20Hauling%20Quote">Email for a Quote →</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><span>© 2026 Maui Pickup & Hauling</span><span>Local pickup, delivery & hauling on Maui · <a href="tel:+18088681224">808-868-1224</a></span></div></footer>
+</body>
+</html>
